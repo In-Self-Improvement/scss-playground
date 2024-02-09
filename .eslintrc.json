@@ -15,7 +15,6 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["react-refresh", "react", "jsx-a11y", "import", "prettier"],
   "rules": {
-    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "max-depth": ["warn", 2],
     "max-lines": ["error", 200],
