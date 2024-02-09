@@ -24,4 +24,4 @@ jobs:
 
       # Run ESLint
       - name: Run ESLint
-        run: npm run lint
+        run: npm run check:lint-and-types
