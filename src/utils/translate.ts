@@ -5,7 +5,6 @@ import {
 } from 'react-i18next';
 
 import en from '@/translates/en/en.json';
-import es from '@/translates/es/es.json';
 import ko from '@/translates/ko/ko.json';
 
 export const getUserLanguage = () => {
@@ -16,9 +15,6 @@ export const getUserLanguage = () => {
 
 i18n.use(initReactI18next).init({
   resources: {
-    es: {
-      translation: es,
-    },
     en: {
       translation: en,
     },
