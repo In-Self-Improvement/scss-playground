@@ -1,0 +1,79 @@
+$font-styles: (
+  head-1: (
+    size: 48px,
+    weight: 600,
+    letter-spacing: -0.96px,
+  ),
+  head-2: (
+    size: 36px,
+    weight: 600,
+    letter-spacing: -0.72px,
+  ),
+  head-3: (
+    size: 28px,
+    weight: 700,
+    letter-spacing: -0.56px,
+  ),
+  head-4: (
+    size: 20px,
+    weight: 600,
+    letter-spacing: -0.4px,
+  ),
+
+  body-1-medium: (
+    size: 18px,
+    weight: 400,
+    letter-spacing: -0.36px,
+  ),
+
+  body-1-regular: (
+    size: 18px,
+    weight: 400,
+    letter-spacing: -0.36px,
+  ),
+  body-2-medium: (
+    size: 16px,
+    weight: 400,
+    letter-spacing: -0.32px,
+  ),
+
+  body-2-regular: (
+    size: 16px,
+    weight: 400,
+    letter-spacing: -0.32px,
+  ),
+
+  body-3-medium: (
+    size: 14px,
+    weight: 400,
+    letter-spacing: -0.28px,
+  ),
+
+  body-3-regular: (
+    size: 14px,
+    weight: 400,
+    letter-spacing: -0.28px,
+  ),
+
+  caption-medium: (
+    size: 13px,
+    weight: 500,
+    letter-spacing: -0.26px,
+  ),
+
+  caption-regular: (
+    size: 13px,
+    weight: 400,
+    letter-spacing: -0.26px,
+  ),
+);
+
+@mixin style($style-name) {
+  $style: map-get($font-styles, $style-name);
+  font-size: map-get($style, size);
+  font-weight: map-get($style, weight);
+  letter-spacing: map-get($style, letter-spacing);
+  // font-family: Inter;
+  font-style: normal;
+  line-height: normal;
+}
