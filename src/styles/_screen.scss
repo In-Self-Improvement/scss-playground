@@ -1,0 +1,17 @@
+@mixin breakpoint($screen) {
+  @if ($screen == 'M') {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @if ($screen == 'T') {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if ($screen == 'D') {
+    @media screen and (min-width: 1440px) {
+      @content;
+    }
+  }
+}
