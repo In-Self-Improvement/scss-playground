@@ -5,16 +5,19 @@ import styles from './Button.module.scss';
 interface ButtonProps {
   type?: 'submit' | 'reset' | 'button';
   children: React.ReactNode;
+  apple?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
   const cn = classnames.bind(styles);
-  const { type = 'button', children } = props;
+  const { type = 'button', children, apple = false } = props;
 
   return (
-    <div className={cn('button')}>
+    <div>
       {/* eslint-disable-next-line react/button-has-type */}
-      <button type={type}>{children}</button>
+      <button type={type} className={cn('button', apple && 'button__apple')}>
+        {children}
+      </button>
     </div>
   );
 };
